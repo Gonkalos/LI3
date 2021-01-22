@@ -1,4 +1,4 @@
-cd Code
+cd Code/
 make
 ./SGV
 make clean
