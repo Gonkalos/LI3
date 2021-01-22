@@ -1,5 +1,7 @@
 package MVC.Controlador;
 
+
+
 import java.util.List;
 import MVC.Input;
 import MVC.IGestaoVendasControlador;
@@ -15,28 +17,38 @@ import MVC.Vista.MenuOpcoes;
 import MVC.Vista.Listagem;
 import MVC.Exceptions.*;
 
-public class GestaoVendasControlador implements IGestaoVendasControlador {
-
-    // Modelos
+/**
+ * Escreva a descrição da classe GestaoVendasControlador aqui.
+ * 
+ * @author (seu nome) 
+ * @version (08/06/2019)
+ */
+public class GestaoVendasControlador implements IGestaoVendasControlador
+{
+    /** Modelos */
     private IGestaoVendasModelos modelos;
-
-    // Vista
+    /** Vista */
     private IGestaoVendasVista vista;
-
-    // Atualiza os modelos
-
+    
+    /**
+     * Atualiza os modelos
+     * @param modelos novo valor de modelos
+     */
     public void setModelos(IGestaoVendasModelos modelos){
         this.modelos = modelos;
     }
-
-    // Atualiza a vista
-
+    
+    /**
+     * Atualiza a vista
+     * @param vista novo valor de vista
+     */
     public void setVista(IGestaoVendasVista vista){
         this.vista = vista;
     }
-
-    // Método que dá início ao controlador(Executa o menu principal)
-
+    
+    /**
+     * Método que dá início ao controlador(Executa o menu principal)
+     */
     public void executa(){
         int opcao = -1;
         do{
@@ -81,8 +93,7 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
             }
         }while(opcao != 0);
     }
-
-
+    
     private void executaConsultasInterativas(){
         int opcao = -1;
         setVista(new MenuConsultasInterativas());
@@ -121,7 +132,8 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
         }while(opcao != 0);
     }
     
-
+    
+    
     private void q1() {
         String titulo = "------- Produtos nunca comprados -------";
         int opcao = 0;
@@ -230,8 +242,7 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
             }
         }while(opcao != 0);
     }
-
-
+    
     private void q3(){
         String titulo = "------- Dados refentes às compras de um cliente -------";
         int opcao = 0;
@@ -289,8 +300,7 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
             setVista(new MenuConsultasInterativas());
         }
     }
-
-
+    
     private void q4 (){
         String titulo = "------- Dados refentes às vendas de um produto -------";
         int opcao = 0;
@@ -655,7 +665,7 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
         l.clear();
     }
     
-    // estatisticas
+     //estatisticas
 
     private void numTotalVendasMes(){
         String titulo = "------- Número total de compras por mês -------";
@@ -679,8 +689,7 @@ public class GestaoVendasControlador implements IGestaoVendasControlador {
         Input.lerString();
         setVista(new MenuConsultasEstatisticas());
     }
-
-
+    
     private void numClientesMes(){
         String titulo = "------- Faturação total de cada produto, mês a mês, filial a filial -------";
         int opcao = 0;

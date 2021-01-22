@@ -4,18 +4,21 @@ import MVC.Controlador.GestaoVendasControlador;
 import MVC.Modelos.SGV;
 import MVC.Vista.MenuPrincipal;
 import java.io.FileNotFoundException;
-
-public class GestaoVendasApp {
-
+/**
+ * Escreva a descrição da classe GereVendas aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+public class GestaoVendasApp{ 
     private static IGestaoVendasModelos criaDados(){
         IGestaoVendasModelos gestaoModelos = new SGV();
         String titulo = "";
-        try {
+        try{
             System.out.println("\fIntroduza o nome do ficheiro de 'Vendas' que pretende ler.");
             titulo = Input.lerString();
             gestaoModelos.lerFicheiros(titulo);
-        }
-        catch(FileNotFoundException e){
+        }catch(FileNotFoundException e){
             System.out.println("\fFicheiro com o titulo " + titulo + " e o ficheiro predefinido não encontrados!\n\n");
             gestaoModelos = null;
         }
@@ -24,7 +27,7 @@ public class GestaoVendasApp {
     
     public static void main(String[] args) {
         IGestaoVendasModelos modelos = criaDados();
-        if (modelos == null) {
+        if(modelos == null) { 
             System.out.println("ERRO INICIALIZAÇÃO");
             System.exit(-1); 
         }
