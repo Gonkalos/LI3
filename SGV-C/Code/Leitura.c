@@ -63,7 +63,7 @@ int validaProduto(char* produto){
 /*Ler ficheiro de clientes */
 int lerClientes(CatalogoClientes* catClientes, GestaoClientes* gc, int* numValidos){
     (*numValidos) = 0;
-    FILE *fp = fopen("./Clientes.txt","r");
+    FILE *fp = fopen("../Files/Clientes.txt","r");
     int i = 0;
     if(!fp){
         perror("Ocorreu um erro ao abrir o ficheiro de Clientes!\n");
@@ -90,7 +90,7 @@ int lerClientes(CatalogoClientes* catClientes, GestaoClientes* gc, int* numValid
 /*Ler ficheiro de produtos */
 int lerProdutos(CatalogoProdutos* catProdutos,FaturacaoGlobal* faturacao,int* numValidos){
     (*numValidos) = 0;
-    FILE *fp = fopen("./Produtos.txt","r");
+    FILE *fp = fopen("../Files/Produtos.txt","r");
     int i = 0;
     if(!fp){
         perror("Ocorreu um erro ao abrir o ficheiro de Produtos!\n");
@@ -190,7 +190,7 @@ void imprimeVenda(Venda v){
 
 int lerVendas(CatalogoProdutos catProdutos,CatalogoClientes catClientes,FaturacaoGlobal* faturacao,GestaoClientes* gc,int* numValidos){
     (*numValidos) = 0;
-    FILE *fp = fopen("./Vendas_1M.txt","r");
+    FILE *fp = fopen("../Files/Vendas_1M.txt","r");
     int i = 0;
 
     if(!fp){

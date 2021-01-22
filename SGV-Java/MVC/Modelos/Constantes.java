@@ -8,10 +8,10 @@ public class Constantes{
 
     public static final int numFiliais = 3;
 
-    public static final String ficheiroClientes = "Ficheiros/Clientes.txt";
+    public static final String ficheiroClientes = "Files/Clientes.txt";
 
-    public static final String ficheiroProdutos = "Ficheiros/Produtos.txt";
+    public static final String ficheiroProdutos = "Files/Produtos.txt";
 
-    public static final String ficheiroVendas = "Ficheiros/Vendas_1M.txt";
+    public static final String ficheiroVendas = "Files/Vendas_1M.txt";
     
 }

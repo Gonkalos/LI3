@@ -39,3 +39,4 @@ Navegador.o: Navegador.c
 clean:
 	rm SGV
 	rm *.o
+	rm -rf SGV.dSYM

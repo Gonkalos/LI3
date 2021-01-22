@@ -3,5 +3,6 @@
 #define IMPRIME 20
 
 int navegadorAux(char* queri[], int i, char resposta,void (f)(char* queri[],int i,char resposta,int k),int k);
+void navegador(char* queri[], int i, char resposta, int k);
 
 #endif

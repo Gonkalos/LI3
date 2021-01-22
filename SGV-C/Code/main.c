@@ -7,6 +7,7 @@
 #include "FaturacaoGlobal.h"
 #include "GestaoFilial.h"
 #include "Queries.h"
+#include "Leitura.h"
 
 
 void ajuda (int i){
