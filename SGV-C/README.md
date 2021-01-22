@@ -1,5 +1,5 @@
 How to compile and run:
-'''
+```
 sh executable
 ```
 
