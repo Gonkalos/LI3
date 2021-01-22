@@ -1,6 +1,6 @@
 How to compile and run:
 ```
-sh executable
+sh executable.sh
 ```
 
 Project developed in collaboration with: 
